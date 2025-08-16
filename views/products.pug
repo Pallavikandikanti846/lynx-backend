@@ -1,0 +1,16 @@
+extends common/layout
+
+block layout-content
+  section#products
+    h1 Products
+    .crud-buttons 
+          a(href="/addProduct") Add
+    .product-list
+      each product in products
+        .product
+          img(src=product.image, alt=product.title, width="150")
+          h3= product.title
+          p Price: $#{product.price}
+          .crud-buttons
+            a(href=`/products/edit/${product.id}`) Edit
+            a(href=`/products/delete/${product.id}`) Delete

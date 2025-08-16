@@ -1,0 +1,13 @@
+extends common/layout
+
+block layout-content
+  h1 Edit Category
+  form(action=`/categories/edit/${category.id}` method="POST")
+    div
+      label(for="name") Name:
+      input(type="text" name="name" value=category.name required)
+    div
+      label(for="description") description:
+      input(type="text" name="description" value=category.description required)
+   
+      button(type="submit") Update Category

@@ -1,0 +1,188 @@
+ #header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0.2em 2em 0.2em 2em;
+    background-color:rgb(72, 135, 137);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+}
+#logoHeading{
+    font-size: 2em;
+}
+#navItems{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+#navItems li{
+    list-style-type: none;
+}
+#navItems li a{
+    text-decoration: none;
+     color: black;
+     font-size: 1.5em;
+     margin-right: 1.5em;
+     font-weight: 400;
+}
+#mainContent {
+    background-color:#F5F5F5 ;
+    padding: 0.5em;
+    margin-top: 0.2em;
+    /* https://www.google.com/search?sca_esv=18d2e8def591dfb0&rlz=1C1GCEU_en&sxsrf=AHTn8zrQEZ7d1VCg8qHZlw3eO1zWyXSRBw:1747665148395&q=summer+wear+images&udm=2&fbs=ABzOT_CWdhQLP1FcmU5B0fn3xuWpA-dk4wpBWOGsoR7DG5zJBsxayPSIAqObp_AgjkUGqengxVrJ7hrmYmz7X2OZp_NIlVOKtjQ8KZU58baRFH0_thDYqO8ZSLePUvzzT8KvnxlcrJbeKotSbzRBAOnArfK5n4ab8yJ754Bb0pqAb8FBp8Xl2-NftoKePNpI4pg_l1ExPD8ZSvD3N-rtcMeKugB5EXwVCA&sa=X&sqi=2&ved=2ahUKEwiN5uyC4K-NAxU4v4kEHeNONawQtKgLegQIEhAB&biw=1366&bih=599&dpr=1#imgrc=ZmTBJGXvS3mI1M&imgdii=InzgA-0wofGPvM */
+    background-image: url("../images/banner.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: left; */
+}
+#mainDiv{
+    text-align: center;
+    font-size: 3em;
+    margin-right: 0.3em;
+    color:rgb(28, 27, 27)
+}
+#products{
+    margin-top: 0.5em;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.7em;
+}
+.sub-div{
+    text-align: center;
+    padding: 0.5em;
+}
+.product-image{
+    height: 20em;
+}
+.img-heading{
+    font-weight: 200;
+}
+.product-discount{
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.product-price{
+    font-weight: bold;
+}
+#footer{
+    background-color: rgba(0,0,0,0.1);
+    padding: 0.2em;
+    font-size: 1.2em;
+}
+#aboutContent{
+    padding: 2em;
+}
+.content-heading{
+    font-size: 2em;
+}
+.about-content{
+    font-size: 1.5em;
+}
+
+/* Categories Section */
+#categories {
+  padding: 1em 2em;
+  background-color: #e0f0f0;
+  margin-top: 1em;
+}
+#categories h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.8em;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+.crud-buttons{
+   padding-bottom: 1em;
+   text-align: right;
+}
+.crud-buttons a{
+ text-decoration: none;
+ margin-right: 1em;
+ color:black;
+ border:1px solid rgb(72, 135, 137);
+ background-color: rgb(72, 135, 137);
+ border-radius:0.4em; 
+ padding:0.4em;
+}
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+.category {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  padding: 1em 1.5em;
+  width: 250px;
+  text-align: center;
+}
+.category h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+.category p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Products Section */
+#products {
+  padding: 1em 2em;
+  margin-top: 1em;
+  display: block;
+}
+#products h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.8em;
+  /* text-align: center; */
+  font-family: "Ubuntu", sans-serif;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+}
+.product {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  padding: 1em 1em 2em 1em;
+  width: 200px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+}
+.product img {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 0.8em;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.product h3 {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+  min-height: 3em; /* keep consistent height */
+}
+.product p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .category-list, .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .category, .product {
+    width: 90%;
+  }
+}

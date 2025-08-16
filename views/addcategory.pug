@@ -1,0 +1,16 @@
+extends common/layout
+
+block layout-content
+  h1 Add a New Category
+  form(action="/categories/add" method="POST")
+    div
+      label(for="id") ID:
+      input(type="number" name="id" required)
+    div
+      label(for="name") Name:
+      input(type="text" name="name" required)
+    div
+      label(for="description") Price:
+      input(type="text" name="description" required)
+
+      button(type="submit") Add Category
